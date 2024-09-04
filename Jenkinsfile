@@ -13,10 +13,18 @@ pipeline {
             }
         }
 
+        stage('Test Docker') {
+            steps {
+                script {
+                    sh 'docker --version'
+                }
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build(DOCKER_IMAGE)
+                    docker.build('mud2003/my-nextjs-app:latest_$BUILD_ID')
                 }
             }
         }
