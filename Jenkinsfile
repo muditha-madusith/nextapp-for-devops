@@ -7,11 +7,12 @@ pipeline {
     }
 
     stages {
-        // stage('Checkout Code') {
-        //     steps {
-        //         git branch: 'main', url: 'https://github.com/your-repo/your-nextjs-app.git'
-        //     }
-        // }
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/muditha-madusith/nextapp-for-devops.git'
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 script {
