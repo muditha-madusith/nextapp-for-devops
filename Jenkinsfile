@@ -24,7 +24,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('mud2003/my-nextjs-app:latest_$BUILD_ID')
+                    docker.build('mud2003/my-nextjs-app:latest')
                 }
             }
         }
